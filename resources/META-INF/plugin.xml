@@ -1,0 +1,44 @@
+<idea-plugin>
+  <id>com.xfyh.idea.plugin.demo</id>
+  <name>idea-pugin-demo</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">XFYH</vendor>
+
+  <description><![CDATA[
+      idea plugin demo.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <!--    <action id="Idea-plugin-demo.DemoAction" class="com.xfyh.idea.plugin.DemoAction" text="demo"
+                description="idea插件demo">
+          <add-to-group group-id="EditMenu" anchor="first"/>
+        </action>-->
+
+    <group id="my-plugins" text="plugins" description="我的插件">
+      <add-to-group group-id="MainMenu" anchor="last"  />
+      <action id="idea-demo" class="com.xfyh.idea.plugin.DemoAction" text="demo" description="插件demo" />
+      <action id="idea-translate" class="com.xfyh.idea.plugin.TranslateAnaction" text="Translate" description="在线翻译" />
+    </group>
+  </actions>
+</idea-plugin>
